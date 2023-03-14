@@ -12,7 +12,7 @@ public class InteractableObject : MonoBehaviour
 		weapon,
 		healthPack
 	};
-	//Edit
+	//Edit test 2
 	public int item_val;
 	public int ammo_type;
 	public ObjectType type;
