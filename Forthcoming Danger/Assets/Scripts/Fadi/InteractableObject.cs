@@ -45,12 +45,16 @@ public class InteractableObject : MonoBehaviour
 			if(Input.GetKeyDown(KeyCode.E)){
 				if(type == ObjectType.money){
 					addMoney();
+					gameObject.SetActive(false);
 				} else if(type == ObjectType.ammo){
 					addAmmo();
+					gameObject.SetActive(false);
 				} else if(type == ObjectType.weapon){
 					pickWeapon();
+					gameObject.SetActive(false);
 				} else if(type == ObjectType.healthPack){
 					addHealthPack();
+					gameObject.SetActive(false);
 				}
 			}
 		}
