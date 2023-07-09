@@ -6,6 +6,7 @@ public class Fight : MonoBehaviour
 {
     // Start is called before the first frame update
 	ParticleSystem ps;
+	List<ParticleCollisionEvent> collisionEvents;
 	bool trigger;
 	public bool multi;
 	public bool auto;
@@ -14,6 +15,7 @@ public class Fight : MonoBehaviour
     void Start()
     {
         ps = gameObject.GetComponent<ParticleSystem>();
+		collisionEvents = new List<ParticleCollisionEvent>();
     }
 
     // Update is called once per frame
@@ -36,5 +38,27 @@ public class Fight : MonoBehaviour
 			//ps.enableEmission = false;
 			trigger = false;
 		}
+    }
+	
+	
+
+    void OnParticleCollision(GameObject other)
+    {
+        int numCollisionEvents = ps.GetCollisionEvents(other, collisionEvents);
+
+        Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
+        int i = 0;
+
+        while (i < numCollisionEvents)
+        {
+            if (rb)
+            {
+                if(other.tag == "Enemy"){
+					other.GetComponent<enemyLife>().health--;
+					Debug.Log("HIT");
+				}
+            }
+            i++;
+        }
     }
 }
