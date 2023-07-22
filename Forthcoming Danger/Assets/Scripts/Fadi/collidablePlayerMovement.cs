@@ -9,12 +9,18 @@ public class collidablePlayerMovement : MonoBehaviour
     public float playerSpeedCoefficient; // effects the movement speed of the player
     public Camera cam1; // the main camera, used for player position determination
 	private Vector2 movement;
-
+	
+	public GameObject GameOver;
+	
+	public int health = 100;
 
     void Update()
     {
 		movement = new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical")).normalized;
-
+		if(health < 1){
+			GameOver.SetActive(true);
+			Time.timeScale = 0;
+		}
         
     }
 	void FixedUpdate()

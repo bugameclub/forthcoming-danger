@@ -28,15 +28,18 @@ public class Fight : MonoBehaviour
 			if(multi && timer > wait){
 				ps.Emit(10);
 				timer = 0;
+				Time.timeScale = 0.4f;
 			}
 		}
 		if(trigger && !multi && timer > wait){
 			timer = 0;
 			ps.Emit(1);
+			Time.timeScale = 0.4f;
 		}
 		if(Input.GetMouseButtonUp(0)){
 			//ps.enableEmission = false;
 			trigger = false;
+			Time.timeScale = 1f;
 		}
     }
 	
