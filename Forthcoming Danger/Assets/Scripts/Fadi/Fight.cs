@@ -12,6 +12,8 @@ public class Fight : MonoBehaviour
 	public bool auto;
 	public float wait = 2f;
 	float timer = 0f;
+	public string shootButton = "mouse 0";
+
     void Start()
     {
         ps = gameObject.GetComponent<ParticleSystem>();
@@ -22,7 +24,7 @@ public class Fight : MonoBehaviour
     void Update()
     {
 		timer += Time.deltaTime;
-        if(Input.GetMouseButtonDown(0)){
+        if(Input.GetKeyDown(shootButton)){
 			//ps.enableEmission = true;
 			trigger = true;
 			if(multi && timer > wait){
@@ -36,7 +38,7 @@ public class Fight : MonoBehaviour
 			ps.Emit(1);
 			Time.timeScale = 0.4f;
 		}
-		if(Input.GetMouseButtonUp(0)){
+		if(Input.GetKeyUp(shootButton)){
 			//ps.enableEmission = false;
 			trigger = false;
 			Time.timeScale = 1f;
