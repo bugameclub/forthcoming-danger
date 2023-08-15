@@ -16,8 +16,8 @@ public class playerMovement : MonoBehaviour
 
     void Update()
     {
-        rotateCheck();
         moveCheck();
+        rotateCheck();
     }
 
     public void moveCheck()
