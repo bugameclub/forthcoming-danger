@@ -30,13 +30,13 @@ public class Fight : MonoBehaviour
 			if(multi && timer > wait){
 				ps.Emit(10);
 				timer = 0;
-				Time.timeScale = 0.4f;
+				//Time.timeScale = 0.4f;
 			}
 		}
 		if(trigger && !multi && timer > wait){
 			timer = 0;
 			ps.Emit(1);
-			Time.timeScale = 0.4f;
+			//Time.timeScale = 0.4f;
 		}
 		if(Input.GetKeyUp(shootButton)){
 			//ps.enableEmission = false;

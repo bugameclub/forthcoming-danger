@@ -13,7 +13,11 @@ public class collidablePlayerMovement : MonoBehaviour
 	public GameObject GameOver;
 	
 	public int health = 100;
-
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = false;
+    }
     void Update()
     {
 		movement = new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical")).normalized;

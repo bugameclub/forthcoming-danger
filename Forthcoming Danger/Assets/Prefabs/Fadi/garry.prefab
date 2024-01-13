@@ -252,6 +252,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -281,6 +282,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
     startSize:
@@ -602,6 +604,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
+    gravitySource: 0
     maxNumParticles: 1000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
@@ -1331,6 +1334,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -1360,6 +1364,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
   UVModule:
@@ -3580,6 +3585,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -3609,6 +3615,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
@@ -3987,6 +3994,7 @@ ParticleSystem:
         m_RotationOrder: 4
     minVertexDistance: 0.29
     textureMode: 0
+    textureScale: {x: 1, y: 1}
     ribbonCount: 1
     shadowBias: 0.5
     worldSpace: 0
@@ -4029,6 +4037,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -4058,6 +4067,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
     widthOverTrail:
@@ -4145,6 +4155,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -4174,6 +4185,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
   CustomDataModule:
@@ -4212,6 +4224,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -4241,6 +4254,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
     colorLabel0: Color
@@ -4494,6 +4508,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -4523,6 +4538,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
     colorLabel1: Color
@@ -4967,6 +4983,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -4981,6 +5003,25 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -5011,6 +5052,7 @@ GameObject:
   - component: {fileID: 4583972812053651379}
   - component: {fileID: 4583972812053651378}
   - component: {fileID: 4583972812053651377}
+  - component: {fileID: 2821810751931580866}
   m_Layer: 2
   m_Name: Graphics
   m_TagString: Untagged
@@ -5054,7 +5096,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5100,3 +5142,61 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aipath: {fileID: 4583972811670958384}
   weapon: {fileID: 4583972811273561476}
+--- !u!114 &2821810751931580866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4583972812053651380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.12022015, y: 0.028900592, z: -4.624723e-11}
+  - {x: -0.12053976, y: 0.19086833, z: -4.624723e-11}
+  - {x: 0.1400599, y: 0.19090648, z: -4.624723e-11}
+  - {x: 0.14045335, y: 0.029652223, z: -4.624723e-11}
+  - {x: 0.17019492, y: 0.030130219, z: -5.784315e-10}
+  - {x: 0.19200654, y: -0.0015146689, z: 0.000000016451466}
+  - {x: 0.19412042, y: -0.11142999, z: 0.000000016451466}
+  - {x: 0.15184514, y: -0.17167209, z: 0.000000016451466}
+  - {x: 0.13704874, y: -0.17061521, z: 0.000000016451466}
+  - {x: 0.12903379, y: -0.071508504, z: -5.784315e-10}
+  - {x: 0.11857362, y: -0.010422123, z: -5.784315e-10}
+  - {x: 0.09012252, y: -0.012095685, z: -5.784315e-10}
+  - {x: 0.0909593, y: -0.04975165, z: -5.784315e-10}
+  - {x: 0.07087601, y: -0.051006887, z: -5.784315e-10}
+  - {x: 0.07129454, y: -0.070671655, z: -5.784315e-10}
+  - {x: 0.029872922, y: -0.070671655, z: -5.784315e-10}
+  - {x: 0.029036686, y: -0.050402123, z: 0.000000016451466}
+  - {x: -0.009690936, y: -0.050301645, z: 0.000000016451466}
+  - {x: -0.009388757, y: -0.07034379, z: 0.000000016451466}
+  - {x: -0.05006896, y: -0.071706526, z: 0.000000016451466}
+  - {x: -0.051675763, y: -0.051751506, z: 0.000000016451466}
+  - {x: -0.071765594, y: -0.05192746, z: 0.000000016451466}
+  - {x: -0.071823634, y: -0.0018532232, z: 0.000000016451466}
+  - {x: -0.09664586, y: -0.0022163007, z: 0.000000016451466}
+  - {x: -0.10583492, y: -0.048013307, z: 0.000000016451466}
+  - {x: -0.11673705, y: -0.16112371, z: 0.000000016451466}
+  - {x: -0.13309039, y: -0.15976097, z: 0.000000016451466}
+  - {x: -0.16034585, y: -0.12024051, z: 0.000000016451466}
+  - {x: -0.17261092, y: -0.07935717, z: 0.000000016451466}
+  - {x: -0.17243463, y: -0.020155594, z: -5.784315e-10}
+  - {x: -0.15083309, y: 0.040337395, z: -5.784315e-10}
+  - {x: -0.12957324, y: 0.040337395, z: -5.784315e-10}
+  m_ShapePathHash: -5701258
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 51850
+  m_LocalBounds:
+    m_Center: {x: 0.010754749, y: 0.0096171945, z: 0}
+    m_Extent: {x: 0.18336567, y: 0.18128929, z: 0}
