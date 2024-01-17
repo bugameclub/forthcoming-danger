@@ -18,7 +18,7 @@ public class enemyFacePlayer : MonoBehaviour
 		if(!playerFound)
 		{
 			direction = aipath.desiredVelocity;
-			transform.up = direction * -1.0f;
+			transform.up = direction * -10f;
 		}
 		
 	}
@@ -41,7 +41,6 @@ public class enemyFacePlayer : MonoBehaviour
 				weapon.SetActive(true);
 			}
             //Display the point in world space where the ray hit the collider's surface.
-            Debug.Log(hit.collider.name);
         }
 		if(!foundNow){
 			playerFound = false;
