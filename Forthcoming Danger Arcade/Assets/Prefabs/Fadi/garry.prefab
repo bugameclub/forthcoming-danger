@@ -4828,6 +4828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 8
+  healthbar: {fileID: 7702409865882246312, guid: 7787b1a69518b6347ae9635542d69b0a, type: 3}
 --- !u!1 &4583972811670958388
 GameObject:
   m_ObjectHideFlags: 0
