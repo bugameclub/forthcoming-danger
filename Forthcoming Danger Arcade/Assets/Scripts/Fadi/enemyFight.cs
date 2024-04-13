@@ -7,6 +7,9 @@ public class enemyFight : MonoBehaviour
 	public int damage = 3;
     ParticleSystem ps;
 	List<ParticleCollisionEvent> collisionEvents;
+
+    public GameObject healthbar = GameObject.GetComponent("TestingA/HUD/health-bar");
+
     void Start()
     {
         ps = gameObject.GetComponent<ParticleSystem>();
@@ -25,6 +28,7 @@ public class enemyFight : MonoBehaviour
             {
                 if(other.tag == "Player"){
 					other.GetComponent<collidablePlayerMovement>().health -= damage;
+                    healthbar.GetComponent<health_bar>().updateSlider(other.GetComponent<collidablePlayerMovement>().health);
 					Debug.Log("HIT");
 				}
             }
