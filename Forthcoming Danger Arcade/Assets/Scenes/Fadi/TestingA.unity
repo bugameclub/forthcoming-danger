@@ -10827,6 +10827,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7702409865882246313, guid: 7787b1a69518b6347ae9635542d69b0a, type: 3}
   m_PrefabInstance: {fileID: 7702409865665071286}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1997427745 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7702409865882246294, guid: 7787b1a69518b6347ae9635542d69b0a, type: 3}
+  m_PrefabInstance: {fileID: 7702409865665071286}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997427742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2047084193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10948,6 +10959,10 @@ PrefabInstance:
       propertyPath: TrailModule.enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1019051140874337891, guid: 5c9370777aae3432eafb7742458a7a06, type: 3}
+      propertyPath: hb
+      value: 
+      objectReference: {fileID: 1997427745}
     - target: {fileID: 1019051140874337891, guid: 5c9370777aae3432eafb7742458a7a06, type: 3}
       propertyPath: udp
       value: 
@@ -11261,11 +11276,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7702409865882246313, guid: 7787b1a69518b6347ae9635542d69b0a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -372.5
+      value: -314.32
       objectReference: {fileID: 0}
     - target: {fileID: 7702409865882246313, guid: 7787b1a69518b6347ae9635542d69b0a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -239.35
+      value: -210.9
       objectReference: {fileID: 0}
     - target: {fileID: 7702409865882246313, guid: 7787b1a69518b6347ae9635542d69b0a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
