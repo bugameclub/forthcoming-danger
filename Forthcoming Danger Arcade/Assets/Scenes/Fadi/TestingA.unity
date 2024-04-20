@@ -10196,10 +10196,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScaleFactor: 2.36
+  m_ReferenceResolution: {x: 825.4, y: 1087}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -10216,8 +10216,8 @@ Canvas:
   m_GameObject: {fileID: 1589809416}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1019051141719913174}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -10226,7 +10226,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_TargetDisplay: 0
 --- !u!224 &1589809420
 RectTransform:
@@ -11337,6 +11337,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c9370777aae3432eafb7742458a7a06, type: 3}
+--- !u!20 &1019051141719913174 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1019051140953752896, guid: 5c9370777aae3432eafb7742458a7a06, type: 3}
+  m_PrefabInstance: {fileID: 1019051141719913173}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4583972811831155551
 PrefabInstance:
   m_ObjectHideFlags: 0
