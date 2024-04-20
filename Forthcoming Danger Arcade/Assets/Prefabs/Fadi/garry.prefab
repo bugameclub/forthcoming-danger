@@ -4828,7 +4828,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 8
-  healthbar: {fileID: 7702409865882246312, guid: 7787b1a69518b6347ae9635542d69b0a, type: 3}
 --- !u!1 &4583972811670958388
 GameObject:
   m_ObjectHideFlags: 0
@@ -5000,6 +4999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f53f9996c25114604a1c3b34e6c80835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   health: 30
 --- !u!1 &4583972812053651380
 GameObject:
