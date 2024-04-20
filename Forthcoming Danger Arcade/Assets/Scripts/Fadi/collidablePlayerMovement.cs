@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using TMPro;
 
 public class collidablePlayerMovement : MonoBehaviour
 {
@@ -12,10 +13,15 @@ public class collidablePlayerMovement : MonoBehaviour
 	private Vector2 movement;
     public UDPReceive udp;
 	public GameObject GameOver;
-    public Slider hb;
 
+    public Slider hb;
+    public TMP_Text scr;
+    public TMP_Text final_scr;
 
     public int health = 100;
+    public int score = 0;
+    public float fscore = 0.0f;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.None;
@@ -59,12 +65,14 @@ public class collidablePlayerMovement : MonoBehaviour
         }
 
         updateHealthbar(health);
+        updateScore();
 
         if (health < 1){
-			GameOver.SetActive(true);
+            final_scr.text = "Score: " + score.ToString();
+            GameOver.SetActive(true);
 			Time.timeScale = 0;
 		}
-        
+
     }
 	void FixedUpdate()
 	{
@@ -138,5 +146,16 @@ public class collidablePlayerMovement : MonoBehaviour
     void updateHealthbar(int h)
     {
         hb.value = (float)(h / 100.0);
+    }
+
+    void updateScore()
+    {
+        if (health >= 0)
+        {
+            fscore += 10 * Time.deltaTime;
+        }
+        score = 10 * ((int)fscore / 10);        // score is an integer multiple of 10 closest to fscore
+
+        scr.text = score.ToString();            // update HUD text
     }
 }
