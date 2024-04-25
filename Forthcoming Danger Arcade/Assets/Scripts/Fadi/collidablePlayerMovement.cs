@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using TMPro;
+using System.IO;
 
 public class collidablePlayerMovement : MonoBehaviour
 {
@@ -21,6 +22,10 @@ public class collidablePlayerMovement : MonoBehaviour
     public int health = 100;
     public int score = 0;
     public float fscore = 0.0f;
+
+    string file = "Assets/Saves/scores.txt";
+    public TMP_Text sb1;
+    public TMP_Text sb2;
 
     void Start()
     {
@@ -67,8 +72,9 @@ public class collidablePlayerMovement : MonoBehaviour
         updateHealthbar(health);
         updateScore();
 
-        if (health < 1){
+        if (health < 1 && !GameOver.active){
             final_scr.text = "Score: " + score.ToString();
+            updateScoreboard(score);
             GameOver.SetActive(true);
 			Time.timeScale = 0;
 		}
@@ -157,5 +163,30 @@ public class collidablePlayerMovement : MonoBehaviour
         score = 10 * ((int)fscore / 10);        // score is an integer multiple of 10 closest to fscore
 
         scr.text = score.ToString();            // update HUD text
+    }
+
+    void updateScoreboard(int scr)
+    {
+        if (File.Exists(file))
+        {
+            int[] intScores = new int[7];
+
+            var sr = File.OpenText(file);
+            var line = sr.ReadLine();
+            for (int i = 0; i <= 5; i++)
+            {
+                intScores[i] = int.Parse(line);
+                line = sr.ReadLine();
+            }
+            intScores[6] = scr;
+
+            Debug.Log(intScores.ToString());
+        }
+        else
+        {
+            Debug.Log("Could not Open the file: " + file + " for reading.");
+            Debug.Log(Directory.GetCurrentDirectory());
+            return;
+        }
     }
 }
