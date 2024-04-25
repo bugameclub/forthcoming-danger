@@ -72,7 +72,7 @@ public class collidablePlayerMovement : MonoBehaviour
         updateHealthbar(health);
         updateScore();
 
-        if (health < 1 && !GameOver.active){
+        if (health < 1 && !GameOver.activeSelf){
             final_scr.text = "Score: " + score.ToString();
             updateScoreboard(score);
             GameOver.SetActive(true);
@@ -181,7 +181,7 @@ public class collidablePlayerMovement : MonoBehaviour
             intScores[6] = scr;
 
             string result = "List contents: ";
-            foreach (var item in myList)
+            foreach (var item in intScores)
             {
                 result += item.ToString() + ", ";
             }
