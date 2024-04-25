@@ -180,7 +180,12 @@ public class collidablePlayerMovement : MonoBehaviour
             }
             intScores[6] = scr;
 
-            Debug.Log(intScores.ToString());
+            string result = "List contents: ";
+            foreach (var item in myList)
+            {
+                result += item.ToString() + ", ";
+            }
+            Debug.Log(result);
         }
         else
         {
