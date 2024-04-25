@@ -169,6 +169,8 @@ public class collidablePlayerMovement : MonoBehaviour
     {
         if (File.Exists(file))
         {
+            // put scores from text file into array, add current score, and sort:
+
             int[] intScores = new int[7];
 
             var sr = File.OpenText(file);
@@ -179,6 +181,11 @@ public class collidablePlayerMovement : MonoBehaviour
                 line = sr.ReadLine();
             }
             intScores[6] = scr;
+
+            Array.Sort(intScores);
+            Array.Reverse(intScores);
+
+            // debug:
 
             string result = "List contents: ";
             foreach (var item in intScores)
