@@ -7673,7 +7673,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &718010439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11652,12 +11652,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1997427745}
     - target: {fileID: 1019051140874337891, guid: 5c9370777aae3432eafb7742458a7a06, type: 3}
+      propertyPath: sb1
+      value: 
+      objectReference: {fileID: 1260046676}
+    - target: {fileID: 1019051140874337891, guid: 5c9370777aae3432eafb7742458a7a06, type: 3}
+      propertyPath: sb2
+      value: 
+      objectReference: {fileID: 1485552833}
+    - target: {fileID: 1019051140874337891, guid: 5c9370777aae3432eafb7742458a7a06, type: 3}
       propertyPath: scr
       value: 
       objectReference: {fileID: 1869886154}
     - target: {fileID: 1019051140874337891, guid: 5c9370777aae3432eafb7742458a7a06, type: 3}
       propertyPath: udp
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019051140874337891, guid: 5c9370777aae3432eafb7742458a7a06, type: 3}
+      propertyPath: file
+      value: /scores.txt
       objectReference: {fileID: 0}
     - target: {fileID: 1019051140874337891, guid: 5c9370777aae3432eafb7742458a7a06, type: 3}
       propertyPath: GameOver
