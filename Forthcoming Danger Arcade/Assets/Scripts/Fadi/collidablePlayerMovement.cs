@@ -72,7 +72,7 @@ public class collidablePlayerMovement : MonoBehaviour
         updateHealthbar(health);
         updateScore();
 
-        if (health < 1 && !GameOver.activeSelf){
+        if (health < 1 && !GameOver.active){
             final_scr.text = "Score: " + score.ToString();
             updateScoreboard(score);
             GameOver.SetActive(true);
