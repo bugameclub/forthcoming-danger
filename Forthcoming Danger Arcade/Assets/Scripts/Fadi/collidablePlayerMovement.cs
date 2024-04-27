@@ -181,9 +181,33 @@ public class collidablePlayerMovement : MonoBehaviour
                 line = sr.ReadLine();
             }
             intScores[6] = scr;
+            sr.Close();
 
             Array.Sort(intScores);
             Array.Reverse(intScores);
+
+            // delete and recreate list (yes there is probably a better way to do this)
+
+            File.Delete(file);
+            StreamWriter sw = File.CreateText(file);
+
+            for (int i = 0; i <= 5; i++)
+            {
+                sw.WriteLine(intScores[i].ToString());
+            }
+            sw.Close();
+
+            // edit on-screen text:
+
+            for (int i = 0; i <= 1; i++)
+            {
+                string sbstr = "";
+                for (int j = 0; j <= 2; j++)
+                {
+                    sbstr += (((3*i) + j) + 1).ToString() + ": " + intScores[(3*i) + j].ToString() + "\n";
+                }
+                if (i == 0) sb1.text = sbstr; else sb2.text = sbstr;
+            }
 
             // debug:
 
