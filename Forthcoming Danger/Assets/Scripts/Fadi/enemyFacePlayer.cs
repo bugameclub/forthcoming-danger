@@ -18,7 +18,7 @@ public class enemyFacePlayer : MonoBehaviour
 		if(!playerFound)
 		{
 			direction = aipath.desiredVelocity;
-			transform.up = direction * -1.0f;
+			transform.up = direction * -10f;
 		}
 		
 	}
