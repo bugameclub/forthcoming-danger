@@ -1,14 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-<<<<<<< HEAD
 using UnityEngine.UI;
 using System;
 using TMPro;
 using System.IO;
-=======
-using System;
->>>>>>> main
 
 public class collidablePlayerMovement : MonoBehaviour
 {
@@ -16,7 +12,6 @@ public class collidablePlayerMovement : MonoBehaviour
     public float playerSpeedCoefficient; // effects the movement speed of the player
     public Camera cam1; // the main camera, used for player position determination
 	private Vector2 movement;
-<<<<<<< HEAD
     public UDPReceive udp;
 	public GameObject GameOver;
 
@@ -32,12 +27,6 @@ public class collidablePlayerMovement : MonoBehaviour
     public TMP_Text sb1;
     public TMP_Text sb2;
 
-=======
-	
-	public GameObject GameOver;
-	
-	public int health = 100;
->>>>>>> main
     void Start()
     {
         Cursor.lockState = CursorLockMode.None;
@@ -45,7 +34,6 @@ public class collidablePlayerMovement : MonoBehaviour
     }
     void Update()
     {
-<<<<<<< HEAD
         movement = new Vector2(0f, 0f).normalized;
 
         if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W))
@@ -91,28 +79,14 @@ public class collidablePlayerMovement : MonoBehaviour
 			Time.timeScale = 0;
 		}
 
-=======
-		movement = new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical")).normalized;
-		if(health < 1){
-			GameOver.SetActive(true);
-			Time.timeScale = 0;
-		}
-        
->>>>>>> main
     }
 	void FixedUpdate()
 	{
 		rotateCheck();
 		moveCharacter(movement);
-<<<<<<< HEAD
     }
     public void rotateCheck()
     {    /*
-=======
-	}
-    public void rotateCheck()
-    {        
->>>>>>> main
          Vector3 playerPos = cam1.WorldToScreenPoint(playerRigidbody.position); // gets player position on screen
          Vector3 mousePos = Input.mousePosition; // gets mouse position on screen
 
@@ -132,7 +106,6 @@ public class collidablePlayerMovement : MonoBehaviour
 
              playerRigidbody.rotation = (float)(angleP);
          }
-<<<<<<< HEAD
         */
 
         if (Input.GetKey(KeyCode.F) && Input.GetKey(KeyCode.T))
@@ -168,8 +141,6 @@ public class collidablePlayerMovement : MonoBehaviour
 
 
 
-=======
->>>>>>> main
     }
 	void moveCharacter(Vector3 direction)
     {
@@ -177,7 +148,6 @@ public class collidablePlayerMovement : MonoBehaviour
         // and also multiply 'Time.fixedDeltaTime' to keep the movement consistant on all devices
         playerRigidbody.velocity = direction * playerSpeedCoefficient * Time.fixedDeltaTime;
     }
-<<<<<<< HEAD
 
     void updateHealthbar(int h)
     {
@@ -288,6 +258,4 @@ public class collidablePlayerMovement : MonoBehaviour
         }
     */
     }
-=======
->>>>>>> main
 }
