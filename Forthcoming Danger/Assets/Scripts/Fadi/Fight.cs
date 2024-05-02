@@ -12,7 +12,7 @@ public class Fight : MonoBehaviour
 	public bool auto;
 	public float wait = 2f;
 	float timer = 0f;
-	public string shootButton = "mouse 0";
+	//public string shootButton = "mouse 0";
 
     void Start()
     {
@@ -24,7 +24,8 @@ public class Fight : MonoBehaviour
     void Update()
     {
 		timer += Time.deltaTime;
-        if(Input.GetKeyDown(shootButton)){
+        if(Input.GetKey(KeyCode.F) || Input.GetKey(KeyCode.T) || Input.GetKey(KeyCode.G) || Input.GetKey(KeyCode.H))
+        {
 			//ps.enableEmission = true;
 			trigger = true;
 			if(multi && timer > wait){
@@ -33,16 +34,16 @@ public class Fight : MonoBehaviour
 				//Time.timeScale = 0.4f;
 			}
 		}
+		else
+		{
+			trigger = false;
+		}
 		if(trigger && !multi && timer > wait){
 			timer = 0;
 			ps.Emit(1);
 			//Time.timeScale = 0.4f;
 		}
-		if(Input.GetKeyUp(shootButton)){
-			//ps.enableEmission = false;
-			trigger = false;
-			Time.timeScale = 1f;
-		}
+
     }
 	
 	
