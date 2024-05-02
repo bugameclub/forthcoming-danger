@@ -1,10 +1,11 @@
-
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayAgain : MonoBehaviour
+public class PlayAgainMP : MonoBehaviour
 {
-    public float totalTime = 3;
     public LoadLevel LoadLevel;
+    public float totalTime = 3;
     // Update is called once per frame
     void Update()
     {

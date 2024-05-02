@@ -5000,7 +5000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  health: 30
+  health: 3
 --- !u!1 &4583972812053651380
 GameObject:
   m_ObjectHideFlags: 0

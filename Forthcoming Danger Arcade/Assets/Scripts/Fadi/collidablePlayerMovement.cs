@@ -167,6 +167,38 @@ public class collidablePlayerMovement : MonoBehaviour
 
     void updateScoreboard(int scr)
     {
+        int[] intScores = new int[7];
+        for (int i = 0; i <= 5; i++)
+        {
+            intScores[i] = PlayerPrefs.GetInt(i.ToString(), 0);
+        }
+        intScores[6] = scr;
+        Array.Sort(intScores);
+        Array.Reverse(intScores);
+        for (int i = 0; i <= 5; i++)
+        {
+            PlayerPrefs.SetInt(i.ToString(),intScores[i]);
+        }
+
+        for (int i = 0; i <= 1; i++)
+        {
+            string sbstr = "";
+            for (int j = 0; j <= 2; j++)
+            {
+                sbstr += (((3 * i) + j) + 1).ToString() + ": " + intScores[(3 * i) + j].ToString() + "\n";
+            }
+            if (i == 0) sb1.text = sbstr; else sb2.text = sbstr;
+        }
+
+        // debug:
+
+        string result = "List contents: ";
+        foreach (var item in intScores)
+        {
+            result += item.ToString() + ", ";
+        }
+        Debug.Log(result);
+        /*
         if (File.Exists(file))
         {
             // put scores from text file into array, add current score, and sort:
@@ -224,5 +256,6 @@ public class collidablePlayerMovement : MonoBehaviour
             Debug.Log(Directory.GetCurrentDirectory());
             return;
         }
+    */
     }
 }

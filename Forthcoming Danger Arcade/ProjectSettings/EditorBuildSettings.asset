@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Fadi/Menu.unity
+    guid: 621f6119244cec5499f5307bcf824cfb
   - enabled: 0
     path: Assets/Scenes/Grace/graceTesting.unity
     guid: 74670d290ab0d384db4668fb72a58d3f
@@ -14,4 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Grace/grace's mod.unity
     guid: 650276a85c4c9144fb6eb1a8c3642890
+  - enabled: 1
+    path: Assets/Scenes/Fadi/TestingB.unity
+    guid: 20b7fc4a78944ee44a47cdc77e65a561
   m_configObjects: {}
