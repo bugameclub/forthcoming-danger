@@ -22,6 +22,7 @@ public class cameraMovement : MonoBehaviour
     {
         GameObject player = GameObject.Find("player");
         Vector3 playerPos = player.transform.position;
+        Debug.Log(playerPos);
 
         transform.position = playerPos + (Vector3.back * 10);
     }
