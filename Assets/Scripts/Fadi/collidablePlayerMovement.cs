@@ -190,14 +190,6 @@ public class collidablePlayerMovement : MonoBehaviour
             if (i == 0) sb1.text = sbstr; else sb2.text = sbstr;
         }
 
-        // debug:
-
-        string result = "List contents: ";
-        foreach (var item in intScores)
-        {
-            result += item.ToString() + ", ";
-        }
-        Debug.Log(result);
         /*
         if (File.Exists(file))
         {
