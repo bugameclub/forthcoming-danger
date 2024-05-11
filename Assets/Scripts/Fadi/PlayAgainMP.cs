@@ -16,10 +16,11 @@ public class PlayAgainMP : MonoBehaviour
         }
         else
         {
-            if (Input.anyKey)
+            if (Input.anyKey || totalTime <= -10)
             {
                 LoadLevel.loadLevel("Menu");
             }
+            else totalTime -= Time.unscaledDeltaTime;
         }
     }
 }
